@@ -35,17 +35,16 @@
       </div>
       
       <!-- Daftar nama Views -->
-      <div class="row mt-4">
-        <div class="col-md-6">
-        <h3>VIEWS NAME</h3>  
-      <ul class="list-group">
-          <?php foreach($views as $vws): ?>
-      <li class="list-group-item">
-      <?= $vws['viewsname']; ?>
-      <a href="<?= base_url();?>views/hapus<?= $vws['Id']; ?>" class="badge bg-danger float-right" onclick="return confirm('Are you sure?');">Delete</a>
-    
-      </li>    
-     </ul>
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>VIEWS NAME</h3>
+        <ul class="list-group">
+            <?php foreach($views as $vws): ?>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <?= $vws['Username']; ?>
+                <a href="<?= base_url();?>views/hapus/<?= $vws['Id']; ?>" class="badge bg-danger" onclick="return confirm('Are you sure?');">Delete</a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
     </div>
-  </div>
-<?php endforeach; ?>
+</div>

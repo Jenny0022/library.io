@@ -20,6 +20,7 @@ class Books_model extends CI_Model{
 
 	public function Searching()
 	{
+		
 		$keyword = $this->input->post('keyword', true);
 		$this->db->like('code', $keyword);
 		$this->db->or_like('title', $keyword);
@@ -49,6 +50,8 @@ class Books_model extends CI_Model{
 	}
 
 }
+
+
 
 
 

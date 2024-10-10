@@ -22,7 +22,7 @@ class Views_model extends CI_Model{
 	{
 		$keyword = $this->input->post('keyword', true);
 		$this->db->like('username', $keyword);
-		$this->db->or_like('viewsname', $keyword);
+		$this->db->or_like('collection', $keyword);
 		return $this->db->get('Views')->result_array();
 	}
 

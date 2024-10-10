@@ -12,9 +12,9 @@
       <!-- akhir validasi error -->
 
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #ff00ff; border: 1px solid #ffffff;">
         Add Data
-      </button>
+      </button> 
 
       <div class="row mt-3">
         <div class="col-md-10">
@@ -36,9 +36,9 @@
         <div class="col">
           <form action="" method="post">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Searching" name="keyword">
+              <input type="text" class="form-control" placeholder="Searching" name="keyword" style="background-color: #e0e0e0; border: 2px solid #ffffff;">
               <div class="input-group-append">
-                <button class="btn-primary" type="submit">Search</button>
+                <button class="btn-primary" type="submit" style="background-color: #ff00ff; border: 1px solid #ffffff;">Search</button>
               </div>
             </div>
           </form>
@@ -57,28 +57,28 @@
                 <form action="<?= base_url('books')?>" method="post">
               <div class="form group">
                 <label for="code">Code</label>
-                <input type="number" name="code" class="form-control" id="code" placeholder="Insert code">
+                <input type="number" name="code" class="form-control" id="code" placeholder="Insert code" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
               </div>
                <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Insert title">
+                <input type="text" name="title" class="form-control" id="title" placeholder="Insert title" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
               </div>
                <div class="form-group">
                 <label for="author">Author</label>
-                <input type="text" name="author" class="form-control" id="author" placeholder="Insert author">
+                <input type="text" name="author" class="form-control" id="author" placeholder="Insert author" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
               </div>
                <div class="form-group">
                 <label for="year">Year</label>
-                <input type="number" name="year" class="form-control" id="year" placeholder="Insert year">
+                <input type="number" name="year" class="form-control" id="year" placeholder="Insert year" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
               </div>
                <div class="form-group">
                 <label for="publisher">Publisher</label>
-                <input type="text" name="publisher" class="form-control" id="publisher" placeholder="Insert publisher">
+                <input type="text" name="publisher" class="form-control" id="publisher" placeholder="Insert publisher" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Save</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #d598a3; border: 2px solid #ffffff;">Close</button>
+              <button type="submit" class="btn btn-primary" style="background-color: #ef6f82; border: 2px solid #ffffff;">Save</button>
             </div>
           </form>
           </div>
@@ -106,8 +106,8 @@
       <td><?= $bks['Year']; ?></td>
       <td><?= $bks['Publisher']; ?></td>
       <td>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?= $bks['Id']; ?>">Change</button>
-        <a href="<?= base_url(); ?>books/delete/<?= $bks['Id']; ?>" class="btn btn-danger" onclick="return confirm('Are You Sure?');">Delete</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?= $bks['Id']; ?>" style="background-color: #ff00ff; border: 1px solid #ffffff;">Change</button>
+        <a href="<?= base_url(); ?>books/delete/<?= $bks['Id']; ?>" class="btn btn-danger" onclick="return confirm('Are You Sure?');" style="background-color: #d598a3; border: 1px solid #ffffff;">Delete</a>
         </td>
     </tr>
     <?php endforeach; ?>

@@ -4,12 +4,12 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in your account</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="<?= base_url('admin/login'); ?>" method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="username" class="form-control" placeholder="Username">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>

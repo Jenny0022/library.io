@@ -82,12 +82,21 @@
     <label for="nama">Message</label>
     <textarea type="textarea" class="form-control" id="message" placeholder="Insert Message"></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" style="background-color: #ff00ff; border: 1px solid #ffffff;">Submit</button>
 </form>
     </div>
   </div>
   </div>  
   </div>
 </section>
+
+<head>
+  <style>
+    input.form-control, textarea.form-control {
+        background-color: #ffdbe6;
+    }
+  </style>
+</head>
+
 <!-- end kontak -->
 

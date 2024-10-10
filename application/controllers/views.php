@@ -14,29 +14,23 @@ class Views extends CI_Controller
         $data['views'] = $this->Views_model->getAllViews();
         
         if($this->input->post('keyword')){
-            $data['views'] = $this->Views_model->Searching(); 
-        } else {
-            $data['views'] = $this->Views_model->getAllViews();
+            $data['views'] = $this->Views_model->Searching();     
         }
-        $this->load->view('templates/header', $data);
-            $this->load->view('Views/index', $data);
-            $this->load->view('templates/footer');
-
-        // Validasi form
-        $this->form_validation->set_rules('username', 'username', 'required|is_unique[Views.username]');
-        $this->form_validation->set_rules('viewsname', 'viewsname', 'required|is_unique[Views.viewsname]');
-
-        if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('Views/index', $data);
             $this->load->view('templates/footer');
+
+            
+            $this->form_validation->set_rules('username', 'Username', 'required|is_unique[Views.username]');
+            $this->form_validation->set_rules('collection', 'Collection', 'required|is_unique[Views.collection]');
+            if ($this->form_validation->run() == False){
+
+        
         } else {
             $data = [
                 'code' => $this->input->post('code'),
                 'title' => $this->input->post('title'),
-                'author' => $this->input->post('author'),
-                'year' => $this->input->post('year'),
-                'publisher' => $this->input->post('publisher'),
+                
             ];
             $this->db->insert('Views', $data);
             $this->session->set_flashdata('flash', 'Added.');
