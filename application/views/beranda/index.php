@@ -12,13 +12,13 @@
       .carousel-inner{margin-top: 80px;}
     </style>
     <div class="carousel-item active">
-      <img src="assets/images/cc.jpg.jpeg" class="d-block w-100" height="550" alt="...">
+      <img src="assets/images/cc.jpg.jpeg" class="d-block w-100" height="599" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="assets/images/cc1.jpg.jpeg" class="d-block w-100" height="550" alt="...">
+      <img src="assets/images/cc1.jpg.jpeg" class="d-block w-100" height="599" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="assets/images/cc3.jpg.jpeg" class="d-block w-100" height="550" alt="...">
+      <img src="assets/images/cc3.jpg.jpeg" class="d-block w-100" height="599" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

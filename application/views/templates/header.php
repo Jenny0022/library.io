@@ -21,8 +21,10 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="beranda">Home</a>
         <a class="nav-link" href="books">Books</a>
-        <a class="nav-link" href="beranda">Views</a>
+        <a class="nav-link" href="views">Views</a>
+        <a class="nav-link" href="<?= base_url('admin/login') ?>">Login</a>
         <a class="nav-link disabled" href="beranda" tabindex="-1" aria-disabled="true"></a>
+                
       </div>
     </div>
   </div>

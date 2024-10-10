@@ -59,19 +59,19 @@
                 <label for="code">Code</label>
                 <input type="number" name="code" class="form-control" id="code" placeholder="Insert code">
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" class="form-control" id="title" placeholder="Insert title">
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="author">Author</label>
                 <input type="text" name="author" class="form-control" id="author" placeholder="Insert author">
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="year">Year</label>
                 <input type="number" name="year" class="form-control" id="year" placeholder="Insert year">
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="publisher">Publisher</label>
                 <input type="text" name="publisher" class="form-control" id="publisher" placeholder="Insert publisher">
               </div>
@@ -126,29 +126,29 @@
               <h5 class="modal-title" id="editModalLabel">Edit Books</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <div class="modal-body">
               <?= form_open_multipart('books/change'); ?>
                <input type="hidden" name="id" value="<?= $bks['Id']; ?>">
-
-              <div class="form group">
+              <div class="form-group">
                 <label for="code">Code</label>
                 <input type="numeric" name="code" class="form-control" value="<?= $bks['Code']; ?>" id="code" placeholder="Insert code" readonly>
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" class="form-control" value="<?= $bks['Title']; ?>" id="title" placeholder="Insert title">
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="author">Author</label>
                 <input type="text" name="author" class="form-control" value="<?= $bks['Author']; ?>" id="author" placeholder="Insert author">
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="year">Year</label>
                 <input type="numeric" name="year" class="form-control" value="<?= $bks['Year']; ?>" id="year" placeholder="Insert year">
               </div>
-               <div class="form group">
+               <div class="form-group">
                 <label for="publisher">Publisher</label>
-                <input type="text" name="publisherr" class="form-control" value="<?= $bks['Publisher']; ?>" id="publisher" placeholder="Insert publisher">
+                <input type="text" name="publisher" class="form-control" value="<?= $bks['Publisher']; ?>" id="publisher" placeholder="Insert publisher">
               </div>
             </div>
             <div class="modal-footer">

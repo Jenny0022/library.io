@@ -6,6 +6,9 @@
 class Books_model extends CI_Model{
 	public function getAllBooks()
 	{
+
+    return $this->db->get('books')->result_array();
+
 		// //menggunakan cara pertama
 		// $query = $this->db->get('books');
 		// return &query->result_array();
@@ -21,17 +24,14 @@ class Books_model extends CI_Model{
 		$this->db->like('code', $keyword);
 		$this->db->or_like('title', $keyword);
 		$this->db->or_like('author', $keyword);
-		$this->db->or_like('year', $keyword);
-		$this->db->or_like('publisher', $keyword);
-
+	
 		return $this->db->get('books')->result_array();
 	}
 
 	public function changeDataBooks($id)
 	{
 		$data = [
-			// "nama" => htmlspecialchars($_POST["nama"]), jika tdk mengunakan CI
-			// //atau cara lain
+			
 		    "code" => $this->input->post('code', true),
 		    "title" => $this->input->post('title', true),
 		    "author" => $this->input->post('author'),
