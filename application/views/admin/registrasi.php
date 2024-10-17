@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card-body register-card-body">
+    <div class="card-body register-card-body" style="background-color: pink; border: 1px solid #ffffff;">
       <p class="login-box-msg">Register a new membership</p>
 
       <form action="../../index.html" method="post">
@@ -41,16 +41,24 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" class="btn btn-primary btn-block" style="background-color: #ff00ff; border: 1px solid #ffffff;">Register</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
       
-      <a href="<?= base_url('admin/login') ?>">Back to Login</a>
+      <a href="<?= base_url('admin/login') ?>"style="color: #ff00ff;">Back to Login</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
 </div>
 <!-- /.register-box -->
+
+<head>
+  <style>
+    input.form-control, input.form-control:focus, textarea.form-control {
+        background-color: #ffdbe6;
+    }
+  </style>
+</head>

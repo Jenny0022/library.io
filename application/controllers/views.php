@@ -17,46 +17,60 @@ class Views extends CI_Controller
             $data['views'] = $this->Views_model->Searching();     
         }
             $this->load->view('templates/header', $data);
-            $this->load->view('Views/index', $data);
+            $this->load->view('views/index', $data);
             $this->load->view('templates/footer');
+    }
 
-            
-            $this->form_validation->set_rules('username', 'Username', 'required|is_unique[Views.username]');
-            $this->form_validation->set_rules('collection', 'Collection', 'required|is_unique[Views.collection]');
+        public function add()
+        {
+           $data['judul'] = 'Form add views data';
+           $this->form_validation->set_rules('username', 'username', 'required');
+            $this->form_validation->set_rules('collection', 'collection', 'required'); 
             if ($this->form_validation->run() == False){
-
-        
-        } else {
-            $data = [
-                'code' => $this->input->post('code'),
-                'title' => $this->input->post('title'),
-                
-            ];
-            $this->db->insert('Views', $data);
-            $this->session->set_flashdata('flash', 'Added.');
-            redirect('views');
+                $this->load->view('templates/header', $data);
+                $this->load->view('views/add', $data);
+                $this->load->view('templates/footer');
+            }else{
+                $this->Views_model->addViewsData();
+                $this->session->set_flashdata('flash', 'added');
+                redirect('views');
+            }
         }
+
+     
+    public function change($id)
+    {
+        $data['judul'] = 'Form change views data';
+        $data['views'] = $this->Views_model->getViewsById($id);
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('collection', 'Collection', 'required'); 
+            if ($this->form_validation->run() == False){
+                $this->load->view('templates/header', $data);
+                $this->load->view('views/change', $data);
+                $this->load->view('templates/footer');
+            }else{
+                $this->Views_model->changeDataViews($id);
+                $this->session->set_flashdata('flash', 'changed');
+                redirect('views');
+            }
+        }
+
+
+    public function detail($id)
+    {
+       $data['judul'] = 'Detail views data';
+       $data['views'] = $this->Views_model->getViewsById($id);
+       $this->load->view('templates/header', $data);
+       $this->load->view('Views/detail', $data);
+       $this->load->view('templates/footer');
     }
 
-    public function search()
-    {
-        $keyword = $this->input->post('keyword', true);
-        $data['Views'] = $this->Views_model->Searching();
-        $this->load->view('Views/index', $data); 
-    }
-
-    public function change()
-    {
-        $id = $this->input->post('id'); 
-        $this->Views_model->changeDataViews($id);
-        $this->session->set_flashdata('flash', 'Changed.');
-        redirect('views');
-    }
 
     public function delete($id)
     {
-        $this->Views_model->deleteDataViews($id);
-        $this->session->set_flashdata('flash', 'Deleted.');
-        redirect('views');
+       $this->Views_model->deleteDataViews($id);
+       $this->session->set_flashdata('flash', 'deleted');
+       redirect('views'); 
+
     }
 }

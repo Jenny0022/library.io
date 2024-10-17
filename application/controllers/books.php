@@ -46,6 +46,7 @@ class Books extends CI_Controller
 
     public function search()
     {
+
         $keyword = $this->input->post('keyword', true);
         $data['books'] = $this->Books_model->Searching();
         $this->load->view('books/index', $data); 
@@ -64,5 +65,7 @@ class Books extends CI_Controller
         $this->Books_model->deleteDataBooks($id);
         $this->session->set_flashdata('flash', 'Deleted.');
         redirect('books');
+
+
     }
 }

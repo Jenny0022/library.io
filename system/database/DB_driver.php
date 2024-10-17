@@ -1051,7 +1051,7 @@ abstract class CI_DB_driver {
 
 	// --------------------------------------------------------------------
 
-	/**
+	/** 
 	 * Determines if a query is a "write" type.
 	 *
 	 * @param	string	An SQL query string

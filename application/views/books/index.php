@@ -2,14 +2,7 @@
   <div class="row mt-5">
     <div class="col mt-4">
 
-      <!-- awal validasi error -->
-      <?php if(validation_errors()) : ?>
-        <div class="alert alert-danger" role="alert">
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          <?= validation_errors(); ?>
-        </div>
-      <?php endif; ?>
-      <!-- akhir validasi error -->
+     
 
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #ff00ff; border: 1px solid #ffffff;">
@@ -32,13 +25,13 @@
       <?php endif; ?>
       <!-- akhir flashdata -->
 
-      <div class="row mt-1">
+      <div class="row mt-1 mb-3">
         <div class="col">
           <form action="" method="post">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Searching" name="keyword" style="background-color: #e0e0e0; border: 2px solid #ffffff;">
               <div class="input-group-append">
-                <button class="btn-primary" type="submit" style="background-color: #ff00ff; border: 1px solid #ffffff;">Search</button>
+                <button class="btn btn-primary" type="submit" style="background-color: #ff00ff; border: 1px solid #ffffff;">Search</button>
               </div>
             </div>
           </form>
@@ -57,7 +50,7 @@
                 <form action="<?= base_url('books')?>" method="post">
               <div class="form group">
                 <label for="code">Code</label>
-                <input type="number" name="code" class="form-control" id="code" placeholder="Insert code" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
+                <input type="numeric" name="code" class="form-control" id="code" placeholder="Insert code" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
               </div>
                <div class="form-group">
                 <label for="title">Title</label>
@@ -69,7 +62,7 @@
               </div>
                <div class="form-group">
                 <label for="year">Year</label>
-                <input type="number" name="year" class="form-control" id="year" placeholder="Insert year" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
+                <input type="numeric" name="year" class="form-control" id="year" placeholder="Insert year" style="background-color: #ffdbe6; border: 2px solid #ffffff;">
               </div>
                <div class="form-group">
                 <label for="publisher">Publisher</label>
@@ -78,7 +71,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #d598a3; border: 2px solid #ffffff;">Close</button>
-              <button type="submit" class="btn btn-primary" style="background-color: #ef6f82; border: 2px solid #ffffff;">Save</button>
+              <button type="submit" class="btn btn-primary" style="background-color: #ff1493; border: 2px solid #ffffff;">Save</button>
             </div>
           </form>
           </div>

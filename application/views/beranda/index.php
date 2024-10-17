@@ -92,7 +92,7 @@
 
 <head>
   <style>
-    input.form-control, textarea.form-control {
+    input.form-control, input.form-control:focus, textarea.form-control {
         background-color: #ffdbe6;
     }
   </style>
