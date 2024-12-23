@@ -52,3 +52,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'beranda';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['login'] = 'login/index'; // Route to display the login page
+$route['login/do_login'] = 'login/do_login'; // Route for handling login action
+$route['about'] = 'about/index'; // Route to About controller
+$route['contact'] = 'contact/index'; // Route to Contact controller
+$route['logout'] = 'login/logout'; // Route for logging out
+$route['books'] = 'books/index'; // Ubah sesuai dengan controller Anda
+$route['admin'] = 'admin'; // Jika ingin mengakses admin dashboard dengan URL "yourdomain.com/admin"
+$route['admin/dashboard'] = 'admin/index'; // Bisa digunakan untuk menentukan aksi default
+$route['admin/view_user/(:num)'] = 'admin/view_user/$1'; // Menampilkan detail user dengan ID tertentu
+$route['admin/delete_user/(:num)'] = 'admin/delete_user/$1'; // Menghapus user dengan ID tertentu
+$route['book/create'] = 'book/create';
+$route['book/edit/(:num)'] = 'book/edit/$1';
+$route['book/delete/(:num)'] = 'book/delete/$1';
+$route['libraryadmin'] = 'libraryadmin/index';
+
+
